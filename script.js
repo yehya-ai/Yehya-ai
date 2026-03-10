@@ -186,7 +186,6 @@ copyButtons.forEach((button) => {
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const promptItems = document.querySelectorAll(".prompt-item");
-  const copyButtons = document.querySelectorAll(".copy-btn");
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -206,19 +205,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+});
 
-  copyButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-copy");
-      const text = document.getElementById(targetId).innerText;
+copyButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-copy");
+    const text = document.getElementById(targetId).innerText;
 
-      navigator.clipboard.writeText(text).then(() => {
-        const original = this.innerHTML;
-        this.innerHTML = '<i class="fa-solid fa-check"></i> تم النسخ';
-        setTimeout(() => {
-          this.innerHTML = original;
-        }, 1500);
-      });
+    navigator.clipboard.writeText(text).then(() => {
+      const original = this.innerHTML;
+      this.innerHTML = '<i class="fa-solid fa-check"></i> تم النسخ';
+      setTimeout(() => {
+        this.innerHTML = original;
+      }, 1500);
     });
   });
 });
