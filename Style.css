@@ -1,23 +1,353 @@
-/* ===== Minimal CSS  ===== */
-/* لون الفوتر */
+/* =========================================================
+   Yehya AI | CSS Main File
+   تنسيق عام ومرتب للموقع
+========================================================= */
+
+/* =========================
+   Root Variables
+========================= */
 :root {
-  --dark: #000000;
+  --main-color: #491c52;
+  --main-color-dark: #754a7c;
+  --accent-color: #ffc107;
+  --text-dark: #1f1f1f;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+  --bg-light: #f8f9fa;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.14);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --transition: 0.3s ease;
 }
 
-/* Space for fixed navbar مسافة تحت الناف بار */
+/* =========================
+   Base
+========================= */
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: "Cairo", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+/* =========================
+   Fixed Navbar Space
+========================= */
 .page-top-space {
   padding-top: 90px;
 }
 
-/* Make services section overlap the hero (optional)  \\\   تنسيق المسافة فوق قسم الخدمات  */
+/* =========================
+   Navbar
+========================= */
+#nav {
+  background: linear-gradient(90deg, var(--main-color-dark), var(--main-color));
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.navbar .nav-link:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-link.active {
+  font-weight: 700;
+}
+
+/* =========================
+   Shared Hover Element
+========================= */
+#Card {
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+#Card:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Hero Section
+========================= */
+section.py-5:first-of-type {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+section.py-5:first-of-type .container {
+  background: linear-gradient(135deg, #faf5ff, #ffffff);
+  border-radius: 28px;
+  padding: 60px 30px;
+  box-shadow: var(--shadow-soft);
+}
+
+section.py-5:first-of-type h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+section.py-5:first-of-type h4 {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--text-muted) !important;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* =========================
+   Important AI Section
+========================= */
+.bg-light {
+  background: linear-gradient(180deg, #fcfcfd 0%, #f8f9fa 100%) !important;
+}
+
+.bg-light .col-md-3 > div {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  height: 100%;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.bg-light .col-md-3 > div:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.bg-light h1 {
+  font-weight: 800;
+}
+
+.bg-light h4 {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.bg-light h5 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   AI Definition Section
+========================= */
+section.py-5 .fa-microchip {
+  background: rgba(255, 193, 7, 0.14);
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.py-5 h3.text-secondary {
+  max-width: 950px;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  line-height: 2;
+}
+
+/* =========================
+   Services Cards Section
+========================= */
 .services-overlap {
-  margin-top: 70px;
+  margin-top: 0;
   position: relative;
   z-index: 5;
 }
 
-/* Services circle images \\\  تنسيق صور قسم الخدمات */
+.service-card,
+.card {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.service-card:hover,
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-card .card-body,
+.card .card-body {
+  padding: 1.5rem 1.3rem 1.8rem;
+}
+
+.service-card i.fa-4x {
+  margin-bottom: 5px;
+}
+
+.service-card h2,
+.service-card h3 {
+  font-weight: 800;
+}
+
+.service-card p,
+.service-card h5 {
+  color: var(--text-muted) !important;
+}
+
+.service-card ul {
+  padding-right: 0;
+  margin-bottom: 1rem;
+}
+
+.service-card ul li {
+  margin-bottom: 8px;
+}
+
+.service-card ul li h6 {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-warning {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #000;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.28);
+}
+
+.btn-outline-secondary {
+  border-width: 1.5px;
+}
+
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Final CTA Card
+========================= */
+.card.text-center.shadow-sm {
+  border-radius: 24px !important;
+  box-shadow: var(--shadow-soft) !important;
+  padding: 2rem !important;
+}
+
+.card.text-center.shadow-sm h4 {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.card.text-center.shadow-sm p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  background: linear-gradient(90deg, var(--main-color-dark), var(--main-color));
+  color: var(--white);
+  margin-top: 3rem;
+}
+
+.footer .fw-bold {
+  color: var(--white);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   Back To Top Button
+========================= */
+#backToTop {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  display: none;
+  z-index: 999;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+#backToTop.show {
+  display: block;
+}
+
+/* =========================
+   Optional Existing Classes
+========================= */
 .service-img {
   width: 210px;
   height: 210px;
@@ -26,39 +356,17 @@
   border: 2px solid #6101af;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
-#nav {
-  background-color: #3f044b;
-}
-/* Footer \\\ الفوتر للصفحات  */
-.footer {
-  background-color: #3f044b;
-  color: #fff;
-}
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 576px) {
-  .carousel-img {
-    height: 220px;
-  }
-}
-/* ========== Contact Page Styles
-       (moved from contact.html) ====== */
 
 .page-wrap {
   min-height: calc(100vh - 70px);
-  padding-top: 110px; /* space for fixed navbar */
+  padding-top: 110px;
   padding-bottom: 40px;
 }
 
 .contact-card {
   border: 0;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-icon {
@@ -75,134 +383,299 @@
   opacity: 0.9;
 }
 
-/* Logo rounding without inline style */
 .brand-logo--round {
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* Fix your media query (remove the ;) */
-@media (max-width: 576px) {
-  .carousel-img {
-    height: 220px;
-  }
-}
-
-/* ===   هافر ل كارد صفحة الخدمات مشترك صفحة رئيسية وكاروسيل===== */
-#Card:hover {
-  transform: scale(1.04);
-}
-
-/* ===== Search form effects ===== */
-.navbar .form-control[type="search"] {
-  width: 150px;
-  transition:
-    width 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.navbar .form-control[type="search"]:focus {
-  width: 220px;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
-}
-
-.navbar .btn-outline-light {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-.navbar .btn-outline-light:hover,
-.navbar .btn-outline-light:focus {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* highlight term inside results */
-.search-highlight {
-  background: yellow;
-  font-weight: bold;
-  /* add a small colored underline effect */
-  text-decoration: underline;
-  text-decoration-color: #f00; /* red underline */
-  text-decoration-thickness: 2px;
-  /* optionally change text color for emphasis */
-  color: #d00;
-}
-
-/* ===== Search form effects ===== */
-.navbar .form-control[type="search"] {
-  width: 150px;
-  transition:
-    width 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.navbar .form-control[type="search"]:focus {
-  width: 220px;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
-}
-
-.navbar .btn-outline-light {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-.navbar .btn-outline-light:hover,
-.navbar .btn-outline-light:focus {
-  background-color: #ffffff;
-  color: #000000;
-}
-/* ===== Navbar toggler (three-bar) effect ===== */
-.navbar-toggler {
-  transition:
-    transform 0.3s,
-    filter 0.3s;
-}
-.navbar-toggler:hover {
-  filter: brightness(1.2);
-}
-.navbar-toggler:focus {
-  outline: none;
-}
-
-/* ===== Toggler X-mark effect ===== */
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba(255,255,255,0.55)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3e%3c/svg%3e");
-}
-
-/* ===== Back to top button ===== */
-#backToTop {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  display: none;
-  z-index: 999;
-}
-#backToTop.show {
-  display: block;
-}
-#heder {
-  font-family: "Cairo", sans-serif;
-  color: #000000;
-
-  padding: 30px;
-}
 .icon-yellow {
-  color: #ffc107;
+  color: var(--accent-color);
   margin-left: 8px;
 }
 
+#heder,
 #list {
   font-family: "Cairo", sans-serif;
   color: #000000;
 }
-.card:hover {
-  transform: translateY(-5px);
+
+#heder {
+  padding: 30px;
 }
-.card {
+
+/* =========================
+   Navbar Toggler
+========================= */
+.navbar-toggler {
+  transition:
+    transform 0.3s,
+    filter 0.3s;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.navbar-toggler:hover {
+  filter: brightness(1.15);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba(255,255,255,0.75)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3e%3c/svg%3e");
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 991.98px) {
+  section.py-5:first-of-type .container {
+    padding: 45px 20px;
+  }
+
+  .navbar .nav-link {
+    text-align: center;
+  }
+
+  .footer .container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-top-space {
+    padding-top: 85px;
+  }
+
+  section.py-5:first-of-type h1 {
+    font-size: 2rem;
+  }
+
+  section.py-5:first-of-type h4,
+  .bg-light h4,
+  section.py-5 h3.text-secondary {
+    font-size: 1rem;
+  }
+
+  .service-card .card-body,
+  .card .card-body {
+    padding: 1.2rem 1rem 1.4rem;
+  }
+
+  .card.text-center.shadow-sm {
+    padding: 1.4rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 220px;
+  }
+
+  #backToTop {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
+.tool-card {
   border: none;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
   height: 100%;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+}
+
+.tool-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 4px solid #f0f0f0;
+  display: block;
+}
+
+.tool-icon {
+  font-size: 2rem;
+  color: #f0ad00;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tool-type {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+/* =========================
+   Prompt Library
+========================= */
+.prompt-library {
+  min-height: 60vh;
+}
+
+.prompt-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.filter-btn {
+  border: none;
+  background: #ffffff;
+  color: #3f044b;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffc107;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.prompt-card {
+  border: none;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.prompt-icon {
+  width: 58px;
+  height: 58px;
+  background: #ffc107;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.prompt-box {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 16px;
+  line-height: 1.9;
+  color: #333;
+  font-size: 14px;
+  word-break: break-word;
+  border: 1px solid #eee;
+}
+
+.prompt-item.hide {
+  display: none;
+}
+/* =========================
+   Prompt Library
+========================= */
+.prompt-hero .hero-box {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.prompt-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.filter-btn {
+  border: none;
+  background: #ffffff;
+  color: #3f044b;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffc107;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.prompt-card {
+  border: none;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.prompt-image {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.prompt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 193, 7, 0.16);
+  color: #946200;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.prompt-box {
+  background: #f8f9fa;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 16px;
+  line-height: 1.9;
+  color: #333;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.prompt-item.hide {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .prompt-image {
+    min-height: 220px;
+  }
 }
