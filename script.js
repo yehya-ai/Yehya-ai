@@ -136,17 +136,89 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Make function global for console access
-window.downloadBookingsCSV = downloadBookingsCSV;
+// =========================
+// Prompt Library Filters
+// =========================
+const filterButtons = document.querySelectorAll(".filter-btn");
+const promptItems = document.querySelectorAll(".prompt-item");
 
-document.addEventListener("click", function (event) {
-  const navbar = document.querySelector(".navbar-collapse");
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
 
-  const toggler = document.querySelector(".navbar-toggler");
+    const filter = button.getAttribute("data-filter");
 
-  if (navbar.classList.contains("show")) {
-    if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
-      new bootstrap.Collapse(navbar).hide();
-    }
-  }
+    promptItems.forEach((item) => {
+      const category = item.getAttribute("data-category");
+
+      if (filter === "all" || category === filter) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+  });
+});
+
+// =========================
+// Copy Prompt Button
+// =========================
+const copyButtons = document.querySelectorAll(".copy-btn");
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.getAttribute("data-copy");
+    const text = document.getElementById(targetId).innerText;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fa-solid fa-check"></i> تم النسخ';
+      setTimeout(() => {
+        button.innerHTML = originalText;
+      }, 1500);
+    });
+  });
+});
+// =========================
+// Prompt Library Filters
+// =========================
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const promptItems = document.querySelectorAll(".prompt-item");
+  const copyButtons = document.querySelectorAll(".copy-btn");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      const filter = this.getAttribute("data-filter");
+
+      promptItems.forEach((item) => {
+        const category = item.getAttribute("data-category");
+
+        if (filter === "all" || category === filter) {
+          item.classList.remove("hide");
+        } else {
+          item.classList.add("hide");
+        }
+      });
+    });
+  });
+
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-copy");
+      const text = document.getElementById(targetId).innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const original = this.innerHTML;
+        this.innerHTML = '<i class="fa-solid fa-check"></i> تم النسخ';
+        setTimeout(() => {
+          this.innerHTML = original;
+        }, 1500);
+      });
+    });
+  });
 });
