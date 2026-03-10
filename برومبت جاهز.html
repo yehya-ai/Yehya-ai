@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>برومبت جاهز | Yehya AI</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <!-- ========================= Navbar ========================= -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fa-solid fa-brain"></i>
+          Yehya AI
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+          aria-controls="mainMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fa fa-home"></i>
+                الرئيسية
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="tools.html">
+                <i class="fa fa-robot"></i>
+                الأدوات
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="ai-fields.html">
+                <i class="fa fa-chart-line"></i>
+                مجالات الاستخدام
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link active text-warning" href="برومبت جاهز.html">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                برومبت جاهز
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-top-space"></div>
+
+    <!-- ========================= Hero ========================= -->
+    <section class="prompt-hero py-5">
+      <div class="container">
+        <div class="hero-box text-center">
+          <h1 class="fw-bold mb-3">
+            <i class="fa-solid fa-wand-magic-sparkles text-warning"></i>
+            مكتبة البرومبتات الجاهزة
+          </h1>
+          <p class="text-secondary mb-0">
+            اختر القسم الذي تريده واستعرض برومبتات احترافية جاهزة مع صورة مثال
+            لكل برومبت.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Filters ========================= -->
+    <section class="pb-4">
+      <div class="container">
+        <div class="prompt-filters text-center">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="fruits">الفواكه</button>
+          <button class="filter-btn" data-filter="characters">شخصيات</button>
+          <button class="filter-btn" data-filter="cartoon">كرتون</button>
+          <button class="filter-btn" data-filter="ads">إعلانات</button>
+          <button class="filter-btn" data-filter="video">فيديو</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Prompt Library ========================= -->
+    <section class="pb-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- ========================= FRUITS ========================= -->
+
+          <!-- Banana  الموزة-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/موز.jpeg"
+                    class="prompt-image"
+                    alt="banana example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-banana"></i>
+                      موزة تتحدث
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      برومبت ترند لفيديو أو صورة كرتونية مرحة
+                    </p>
+                    <div class="prompt-box" id="prompt1">
+                      A cute talking banana character with big expressive eyes,
+                      a smiling face, tiny arms and legs, standing in a colorful
+                      park, Pixar style, cartoon animation style, vibrant
+                      colors, soft cinematic lighting, the banana is happily
+                      talking to the camera, funny and playful mood, highly
+                      detailed
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt1"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apple  التفاحة-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/تفاحة.jpeg"
+                    class="prompt-image"
+                    alt="apple example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-apple-whole"></i>
+                      تفاحة تتحدث
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب للأطفال والتعليم
+                    </p>
+                    <div class="prompt-box" id="prompt2">
+                      Cute talking red apple character with glasses, expressive
+                      eyes, smiling face, tiny hands and feet, standing inside a
+                      classroom, Pixar style, 3D cartoon look, colorful
+                      educational background, soft bright lighting, the apple is
+                      talking to children in a fun and friendly way
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt2"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orange برتقال  -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/برتقال .jpeg"
+                    class="prompt-image"
+                    alt="orange example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-lemon"></i>
+                      برتقالة مضحكة
+                    </div>
+                    <p class="text-secondary small mb-3">ستايل مرح وترند</p>
+                    <div class="prompt-box" id="prompt3">
+                      Funny talking orange character wearing sunglasses, big
+                      cartoon eyes, cheerful smile, tiny arms and legs, standing
+                      on a bright colorful background, Pixar style, playful
+                      animation mood, cinematic lighting, cute and humorous
+                      expression, highly detailed 3D cartoon
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt3"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strawberry  فراولة-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/فراولة.jpeg"
+                    class="prompt-image"
+                    alt="strawberry example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-seedling"></i>
+                      فراولة كيوت
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب للمحتوى الطفولي
+                    </p>
+                    <div class="prompt-box" id="prompt4">
+                      Cute talking strawberry character with shiny eyes,
+                      adorable smile, tiny arms and legs, standing in a bright
+                      playground, Pixar style, 3D cartoon animation, vibrant
+                      colors, soft lighting, playful and sweet mood, friendly
+                      character talking to the viewer
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt4"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avocado  أفكادوا -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/أفكادوا.jpeg"
+                    class="prompt-image"
+                    alt="avocado example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-face-smile"></i>
+                      أفوكادو يتكلم
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      ترند مناسب للمطبخ أو الريلز
+                    </p>
+                    <div class="prompt-box" id="prompt5">
+                      Cute avocado character with a happy face, expressive eyes,
+                      tiny arms and legs, standing on a modern kitchen table,
+                      Pixar style, soft cinematic lighting, rich green colors,
+                      talking to the camera in a funny and friendly way, highly
+                      detailed cartoon animation
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt5"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Watermelon  بطيخ-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/بطيخ.jpeg"
+                    class="prompt-image"
+                    alt="watermelon example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-sun"></i>
+                      بطيخة مرحة
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسبة للصيف والمحتوى الممتع
+                    </p>
+                    <div class="prompt-box" id="prompt6">
+                      Cute talking watermelon slice character with big shiny
+                      eyes, smiling face, tiny hands and feet, summer
+                      background, bright cheerful colors, Pixar style, cartoon
+                      animation look, soft sunlight, joyful and playful mood,
+                      highly detailed 3D style
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt6"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mango  مانجا-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/مانجا.jpeg"
+                    class="prompt-image"
+                    alt="mango example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-star"></i>
+                      مانجا لطيفة
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسبة للقصص القصيرة
+                    </p>
+                    <div class="prompt-box" id="prompt7">
+                      Cute talking mango character with adorable face,
+                      expressive eyes, tiny arms and legs, tropical colorful
+                      background, Pixar style, soft warm lighting, cheerful and
+                      playful mood, high detail cartoon animation, friendly
+                      character speaking to camera
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt7"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pineapple  أناناس -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/أناناس.jpeg"
+                    class="prompt-image"
+                    alt="pineapple example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-crown"></i>
+                      أناناس كول
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      برومبت ترندي وشخصية قوية
+                    </p>
+                    <div class="prompt-box" id="prompt8">
+                      Cool talking pineapple character wearing sunglasses,
+                      stylish smile, tiny arms and legs, tropical beach
+                      background, Pixar style, cinematic cartoon lighting,
+                      vibrant colors, fun and confident personality, highly
+                      detailed 3D animated style
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt8"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grapes عنب  -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/عنب.jpeg"
+                    class="prompt-image"
+                    alt="grapes example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-circle"></i>
+                      عنب كرتوني
+                    </div>
+                    <p class="text-secondary small mb-3">مناسب للمحتوى المرح</p>
+                    <div class="prompt-box" id="prompt9">
+                      Cute talking grape cluster character with expressive eyes,
+                      smiling face, tiny arms and feet, cartoon style, Pixar
+                      style, glossy purple colors, playful background, soft
+                      lighting, fun and adorable personality talking to the
+                      audience
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt9"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cherry  كرز-->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/كرز.jpeg"
+                    class="prompt-image"
+                    alt="cherry example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-heart"></i>
+                      كرز لطيف
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب للستايل الناعم
+                    </p>
+                    <div class="prompt-box" id="prompt10">
+                      Cute talking cherry character with shiny eyes, sweet
+                      smile, soft pink-red colors, tiny arms and legs, bright
+                      cartoon background, Pixar style, 3D cute look, playful and
+                      gentle mood, talking directly to the camera
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt10"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lemon  ليمون -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/ليمون .jpeg"
+                    class="prompt-image"
+                    alt="lemon example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-bolt"></i>
+                      ليمونة نشيطة
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسبة للمحتوى السريع
+                    </p>
+                    <div class="prompt-box" id="prompt11">
+                      Energetic talking lemon character with bright expressive
+                      eyes, happy smile, tiny arms and legs, vivid yellow color,
+                      cartoon Pixar style, fresh and lively mood, clean bright
+                      background, talking in a funny and energetic way
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt11"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Peach خوخ -->
+          <div class="col-12 col-lg-6 prompt-item" data-category="fruits">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/خوخ.jpeg"
+                    class="prompt-image"
+                    alt="peach example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-cloud"></i>
+                      خوخة ناعمة
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      أسلوب لطيف وألوان هادئة
+                    </p>
+                    <div class="prompt-box" id="prompt12">
+                      Cute talking peach character with soft pastel colors,
+                      adorable big eyes, warm smile, tiny arms and legs, dreamy
+                      cartoon background, Pixar style, soft cinematic lighting,
+                      sweet and calm personality, highly detailed
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt12"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= CHARACTERS ========================= -->
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="characters">
+            <div class="card prompt-card h-100">
+              <!-- رجل -->
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/رجل .jpeg"
+                    class="prompt-image"
+                    alt="character example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-user"></i>
+                      شاب عربي واقعي
+                    </div>
+                    <p class="text-secondary small mb-3">صورة شخصية احترافية</p>
+                    <div class="prompt-box" id="prompt13">
+                      Ultra realistic portrait of a young Arab man, 22 years
+                      old, standing in a modern city park, cinematic lighting,
+                      detailed face, professional photography, sharp focus, 85mm
+                      lens, high resolution
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt13"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="characters">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/امراة.jpeg"
+                    class="prompt-image"
+                    alt="woman example"
+                  />
+                </div>
+                <!-- امراة -->
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-user-tie"></i>
+                      امرأة عربية احترافية
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب للهوية الشخصية والإعلانات
+                    </p>
+                    <div class="prompt-box" id="prompt14">
+                      Beautiful Arab woman, elegant look, soft smile, standing
+                      in a modern office, realistic style, cinematic lighting,
+                      professional portrait, high detail, premium visual quality
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt14"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= CARTOON ========================= -->
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="cartoon">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/ولد .jpeg"
+                    class="prompt-image"
+                    alt="cartoon kid example"
+                  />
+                </div>
+                <!-- طفل -->
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-child"></i>
+                      طفل كرتوني
+                    </div>
+                    <p class="text-secondary small mb-3">برومبت بأسلوب Pixar</p>
+                    <div class="prompt-box" id="prompt15">
+                      Cute cartoon boy character with big eyes, colorful
+                      clothes, standing in a playground, Pixar style, vibrant
+                      colors, soft lighting, 3D cartoon style, friendly and
+                      playful mood
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt15"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="cartoon">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="/باندا.jpeg"
+                    class="prompt-image"
+                    alt="cartoon animal example"
+                  />
+                </div>
+                <!-- باندا -->
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-paw"></i>
+                      باندا كرتونية
+                    </div>
+                    <p class="text-secondary small mb-3">لطيف ومناسب للأطفال</p>
+                    <div class="prompt-box" id="prompt16">
+                      Cute baby panda talking to the camera, cartoon animation
+                      style, big expressive eyes, soft fur details, colorful
+                      background, Pixar style, playful and friendly mood, highly
+                      detailed 3D character
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt16"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= ADS ========================= -->
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="ads">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+                    class="prompt-image"
+                    alt="ads example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-bullhorn"></i>
+                      إعلان سوشيال ميديا
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      تصميم إعلاني احترافي
+                    </p>
+                    <div class="prompt-box" id="prompt17">
+                      Professional social media advertisement design for a
+                      digital marketing agency, modern layout, purple and gold
+                      colors, glowing elements, marketing icons, premium style,
+                      clean composition, high-end branding
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt17"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="ads">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+                    class="prompt-image"
+                    alt="product ad example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-rectangle-ad"></i>
+                      إعلان منتج فاخر
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب للمنتجات والبضائع
+                    </p>
+                    <div class="prompt-box" id="prompt18">
+                      Luxury product advertisement, premium composition,
+                      dramatic lighting, elegant dark background, glowing
+                      highlights, realistic product showcase, professional
+                      marketing design, high detail and premium look
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt18"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= VIDEO ========================= -->
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="video">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop"
+                    class="prompt-image"
+                    alt="video example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-video"></i>
+                      فيديو تقديمي
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      لبرامج الفيديو التوليدي
+                    </p>
+                    <div class="prompt-box" id="prompt19">
+                      A young Arab woman walking inside a modern training
+                      center, smiling and speaking to the camera, professional
+                      lighting, cinematic video, 4K, natural movements,
+                      realistic style, elegant atmosphere
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt19"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 prompt-item" data-category="video">
+            <div class="card prompt-card h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+                    class="prompt-image"
+                    alt="motion example"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <div class="prompt-badge mb-3">
+                      <i class="fa-solid fa-film"></i>
+                      تحريك صورة
+                    </div>
+                    <p class="text-secondary small mb-3">
+                      مناسب لتحريك الشخصيات أو الفواكه
+                    </p>
+                    <div class="prompt-box" id="prompt20">
+                      Animate the character with natural blinking eyes, subtle
+                      breathing motion, soft head movement, smooth realistic
+                      cartoon animation, cinematic lighting, gentle facial
+                      expression, polished motion
+                    </div>
+                    <button
+                      class="btn btn-warning mt-3 copy-btn"
+                      data-copy="prompt20"
+                    >
+                      <i class="fa-regular fa-copy"></i>
+                      نسخ البرومبت
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Footer ========================= -->
+    <footer class="footer py-4 mt-5">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
+      >
+        <div class="fw-bold">
+          © <span id="year"></span> Yehya AI — استكشف قوة الذكاء الاصطناعي.
+        </div>
+      </div>
+    </footer>
+
+    <button
+      id="backToTop"
+      class="btn btn-primary btn-lg"
+      title="Back to top"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
