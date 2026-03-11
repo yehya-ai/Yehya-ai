@@ -35,7 +35,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainMenu">
-          <ul class="navbar-nav ms-auto gap-2">
+          <ul class="navbar-nav ms-auto gap-0">
             <li id="Card" class="nav-item">
               <a class="nav-link" href="index.html">
                 <i class="fa fa-home"></i>
@@ -82,6 +82,7 @@
       </div>
     </nav>
 
+    <!-- مسافة تحت الناف بار -->
     <div class="page-top-space"></div>
 
     <div class="container py-5">
@@ -100,6 +101,27 @@
         <div class="generator-body">
           <form id="promptForm">
             <div class="row g-4">
+              <!-- مقاس المحتوى -->
+              <div class="col-md-4 form-label">
+                <label class="form-label text-dark">
+                  <i class="fa-solid fa-expand text-warning me-2"></i>
+                  مقاس المحتوى
+                </label>
+
+                <select id="aspectRatio" class="form-select">
+                  <option value="square format 1:1">مربع (1:1)</option>
+                  <option value="vertical format 9:16">طولي (9:16)</option>
+                  <option value="horizontal format 16:9">عرضي (16:9)</option>
+                  <option value="instagram post 1:1">بوست انستغرام</option>
+                  <option value="instagram reel 9:16">ريلز انستغرام</option>
+                  <option value="instagram story 9:16">ستوري انستغرام</option>
+                  <option value="youtube thumbnail 16:9">
+                    يوتيوب Thumbnail
+                  </option>
+                  <option value="cinematic wide 21:9">سينمائي</option>
+                </select>
+              </div>
+
               <div class="col-md-4 form-label">
                 <label class="form-label text-dark">
                   <i class="fa-solid fa-layer-group text-warning me-2"></i>
@@ -228,7 +250,7 @@
                   type="text"
                   id="extraDetails"
                   class="form-control"
-                  placeholder="مثال:  expressive eyes, smiling face, tiny arms and legs"
+                  placeholder="مثال: expressive eyes, smiling face, tiny arms and legs"
                 />
               </div>
             </div>
@@ -295,6 +317,7 @@
 
     <script>
       function generatePrompt() {
+        const aspectRatio = document.getElementById("aspectRatio").value;
         const contentType = document.getElementById("contentType").value;
         const subject = document.getElementById("subject").value;
         const style = document.getElementById("style").value;
@@ -307,7 +330,7 @@
           .getElementById("extraDetails")
           .value.trim();
 
-        let prompt = `${contentType} of ${subject}, ${style}, ${lighting}, ${camera}, ${background}, ${mood}, ${quality}`;
+        let prompt = `${contentType} of ${subject}, ${style}, ${lighting}, ${camera}, ${background}, ${mood}, ${quality}, ${aspectRatio}`;
 
         if (extraDetails) {
           prompt += `, ${extraDetails}`;
@@ -332,6 +355,17 @@
       }
 
       function randomPrompt() {
+        const ratios = [
+          "square format 1:1",
+          "vertical format 9:16",
+          "horizontal format 16:9",
+          "instagram post 1:1",
+          "instagram reel 9:16",
+          "instagram story 9:16",
+          "youtube thumbnail 16:9",
+          "cinematic wide 21:9",
+        ];
+
         const contentTypes = [
           "image prompt",
           "video prompt",
@@ -397,6 +431,7 @@
 
         const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
+        const randomRatio = random(ratios);
         const randomContentType = random(contentTypes);
         const randomSubject = random(subjects);
         const randomStyle = random(styles);
@@ -406,6 +441,7 @@
         const randomMood = random(moods);
         const randomQuality = random(qualities);
 
+        document.getElementById("aspectRatio").value = randomRatio;
         document.getElementById("contentType").value = randomContentType;
         document.getElementById("subject").value = randomSubject;
         document.getElementById("style").value = randomStyle;
@@ -416,7 +452,7 @@
         document.getElementById("quality").value = randomQuality;
         document.getElementById("extraDetails").value = "";
 
-        const prompt = `${randomContentType} of ${randomSubject}, ${randomStyle}, ${randomLighting}, ${randomCamera}, ${randomBackground}, ${randomMood}, ${randomQuality}, vibrant colors, clean composition`;
+        const prompt = `${randomContentType} of ${randomSubject}, ${randomStyle}, ${randomLighting}, ${randomCamera}, ${randomBackground}, ${randomMood}, ${randomQuality}, ${randomRatio}, vibrant colors, clean composition`;
 
         document.getElementById("resultText").textContent = prompt;
       }
