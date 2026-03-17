@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الأسئلة الشائعة | Yehya AI</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <!-- ========================= Navbar ========================= -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/index.html">
+          <i class="fa-solid fa-brain"></i>
+          Yehya AI
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+          aria-controls="mainMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto gap-0">
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="/index.html">
+                <i class="fa fa-home"></i>
+                الرئيسية
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="/tools.html">
+                <i class="fa fa-robot"></i>
+                الأدوات
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="/fields.html">
+                <i class="fa fa-chart-line"></i>
+                مجالات الاستخدام
+              </a>
+            </li>
+
+            <li id="Card" class="nav-item">
+              <a class="nav-link active text-warning" href="/questilns.html">
+                <i class="fa-solid fa-circle-question"></i>
+                أسئلة شائعة؟
+              </a>
+            </li>
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="/prompt.html">
+                <i class="fa-solid fa-brain"></i>
+                برومبت جاهز
+              </a>
+            </li>
+            <li id="Card" class="nav-item">
+              <a class="nav-link" href="/generator.html">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                مولد البرومبت
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- مسافة تحت الناف بار -->
+    <div class="page-top-space"></div>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <div class="faq-header text-center mb-5">
+          <h1 class="fw-bold">
+            <i class="fa-solid fa-circle-question text-warning"></i>
+            الأسئلة الشائعة؟
+          </h1>
+
+          <p class="text-secondary">
+            أكثر الأسئلة التي يسألها المستخدمون حول الذكاء الاصطناعي
+            والبرومبتات.
+          </p>
+        </div>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+          <!-- question 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+              >
+                ما هو الذكاء الاصطناعي؟
+              </button>
+            </h2>
+
+            <div
+              id="faq1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                الذكاء الاصطناعي هو تقنية تسمح للكمبيوتر بمحاكاة الذكاء البشري
+                مثل فهم النصوص وإنشاء الصور والفيديو وتحليل البيانات واتخاذ
+                القرارات.
+              </div>
+            </div>
+          </div>
+          <!-- question 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+              >
+                ما الفرق بين الروبورت والذكاء الاصطناعي ؟
+              </button>
+            </h2>
+
+            <div
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                بكل بساطة
+                <strong
+                  >الروبورت هو الجسم, أما الذكاء الاصطناعي هو العقل.
+                </strong>
+              </div>
+            </div>
+          </div>
+          <!-- question 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3"
+              >
+                ما هو البرومبت؟
+              </button>
+            </h2>
+
+            <div
+              id="faq3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                البرومبت هو النص (الأمر) الذي تكتبه للذكاء الاصطناعي ليخبره بما
+                تريد إنشاؤه مثل صورة أو فيديو أو نص. كلما كان البرومبت أكثر
+                تفصيلاً كانت النتيجة أفضل.
+              </div>
+            </div>
+          </div>
+          <!-- question 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq4"
+              >
+                لماذا تعتبر مهارة كتابة البرومبت مهمة جداً؟
+              </button>
+            </h2>
+
+            <div
+              id="faq4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                البرومبت هو الطريقة التي تتواصل بها مع الذكاء الاصطناعي. كلما
+                كان الوصف دقيقاً وواضحاً كانت النتائج أكثر احترافية.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq5"
+              >
+                هل يمكن إنشاء صور بالذكاء الاصطناعي؟
+              </button>
+            </h2>
+
+            <div
+              id="faq5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، توجد العديد من الأدوات مثل
+                <strong> Googel Gemini</strong>, Leonardo AI التي تسمح بإنشاء
+                صور احترافية باستخدام وصف نصي بسيط.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq6"
+              >
+                هل يمكن إنشاء فيديو بالذكاء الاصطناعي؟
+              </button>
+            </h2>
+
+            <div
+              id="faq6"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، يمكن إنشاء فيديو باستخدام أدوات مثل Runway و Kling حيث
+                يمكنك تحويل النص أو الصور إلى فيديو بسهولة.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq7"
+              >
+                هل الذكاء الاصطناعي مجاني؟
+              </button>
+            </h2>
+
+            <div
+              id="faq7"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                بعض أدوات الذكاء الاصطناعي مجانية ولكن بميزات محدودة، بينما توفر
+                الباقات المدفوعة ميزات أقوى وجودة أعلى.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 8 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq8"
+              >
+                هل سيحل الذكاء الاصطناعي مكان المصممين؟
+              </button>
+            </h2>
+
+            <div
+              id="faq8"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                لا، الذكاء الاصطناعي لن يستبدل المصممين، لكنه سيغير طريقة عملهم.
+                المصمم الذي يتعلم استخدام أدوات الذكاء الاصطناعي سيتمكن من العمل
+                بسرعة أكبر وإنتاج أفكار وتصاميم أكثر في وقت أقل. لذلك يعتبر
+                الذكاء الاصطناعي أداة مساعدة قوية وليس بديلاً عن الإبداع البشري.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 9 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq9"
+              >
+                هل سيحل الذكاء الاصطناعي مكان المبرمجين؟
+              </button>
+            </h2>
+
+            <div
+              id="faq9"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                الذكاء الاصطناعي لا يستبدل المبرمجين، بل يساعدهم في كتابة
+                الأكواد بشكل أسرع واكتشاف الأخطاء وتحسين الإنتاجية. المبرمج الذي
+                يعرف كيف يستخدم أدوات الذكاء الاصطناعي سيكون أكثر كفاءة وقدرة
+                على تطوير المشاريع بسرعة.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 10 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq10"
+              >
+                هل يمكن الربح من الذكاء الاصطناعي؟
+              </button>
+            </h2>
+
+            <div
+              id="faq10"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، يمكن استخدام الذكاء الاصطناعي في العديد من المجالات المربحة
+                مثل تصميم الصور وكتابة المحتوى وصناعة الفيديوهات والتسويق
+                الرقمي. الكثير من الأشخاص يستخدمون هذه الأدوات اليوم لإنشاء
+                مشاريع رقمية وتقديم خدمات عبر الإنترنت.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 11 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq11"
+              >
+                هل يمكن لأي شخص استخدام الذكاء الاصطناعي؟
+              </button>
+            </h2>
+
+            <div
+              id="faq11"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، معظم أدوات الذكاء الاصطناعي اليوم مصممة لتكون سهلة
+                الاستخدام حتى للمبتدئين. يمكن لأي شخص تعلم استخدامها خلال وقت
+                قصير خاصة إذا تعلم أساسيات كتابة البرومبت.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 12 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq12"
+              >
+                هل الذكاء الاصطناعي سيغير سوق العمل؟
+              </button>
+            </h2>
+
+            <div
+              id="faq12"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، الذكاء الاصطناعي يغير طريقة العمل في العديد من المجالات.
+                بعض الوظائف ستتطور وتصبح أكثر اعتماداً على التكنولوجيا، وفي
+                المقابل ستظهر وظائف جديدة مرتبطة باستخدام الذكاء الاصطناعي
+                وإدارته.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 13 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq13"
+              >
+                هل يفهم الذكاء الاصطناعي ما يقوله فعلاً؟
+              </button>
+            </h2>
+
+            <div
+              id="faq13"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                في الحقيقة الذكاء الاصطناعي لا يفهم مثل الإنسان. هو يتعلم من
+                كميات ضخمة من البيانات ويستخدم الأنماط اللغوية للتنبؤ بالكلمات
+                أو الصور المناسبة. لذلك يبدو وكأنه يفهم لكنه في الواقع يحلل
+                الأنماط فقط.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 14 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq14"
+              >
+                لماذا يعطي الذكاء الاصطناعي أحياناً إجابات خاطئة بثقة؟
+              </button>
+            </h2>
+
+            <div
+              id="faq14"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                الذكاء الاصطناعي يعتمد على التوقع وليس المعرفة الحقيقية، لذلك قد
+                يقدم إجابة تبدو صحيحة لكنه غير متأكد منها. لهذا من المهم دائماً
+                مراجعة المعلومات المهمة.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 15 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq15"
+              >
+                هل يمكن للذكاء الاصطناعي أن يكون مبدعاً؟
+              </button>
+            </h2>
+
+            <div
+              id="faq15"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                الذكاء الاصطناعي يستطيع إنتاج أفكار وصور ونصوص جديدة، لكنه يعتمد
+                دائماً على بيانات تعلم منها سابقاً. الإبداع الحقيقي يظهر عندما
+                يستخدم الإنسان هذه الأدوات بطريقة ذكية.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 16 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq16"
+              >
+                لماذا تختلف نتائج الذكاء الاصطناعي عند كتابة نفس البرومبت؟
+              </button>
+            </h2>
+
+            <div
+              id="faq16"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                حتى لو كتبت نفس البرومبت قد تختلف النتائج لأن أنظمة الذكاء
+                الاصطناعي تستخدم خوارزميات عشوائية قليلاً لتوليد النتائج، وهذا
+                ما يجعل كل نتيجة مختلفة قليلاً عن الأخرى.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 17 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq17"
+              >
+                هل يمكن للذكاء الاصطناعي أن يتعلم مني؟
+              </button>
+            </h2>
+
+            <div
+              id="faq17"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                بعض الأدوات يمكنها تحسين النتائج بناءً على تفاعلك معها أو على
+                البيانات التي تقدمها، لكنها لا تتعلم منك بشكل مباشر في كل مرة
+                تستخدمها.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 18 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq18"
+              >
+                لماذا بعض صور الذكاء الاصطناعي تبدو غريبة أحياناً؟
+              </button>
+            </h2>
+
+            <div
+              id="faq18"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                لأن النموذج يحاول دمج ملايين الصور التي تعلم منها، وقد ينتج
+                أحياناً تفاصيل غير واقعية مثل عدد أصابع غير صحيح أو عناصر غير
+                منطقية.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 19 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq19"
+              >
+                هل الذكاء الاصطناعي يراقب ما أكتبه؟
+              </button>
+            </h2>
+
+            <div
+              id="faq19"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                معظم أدوات الذكاء الاصطناعي تقوم بتحليل البيانات لتحسين خدماتها،
+                لذلك يفضل عدم مشاركة معلومات شخصية أو حساسة عند استخدام هذه
+                الأدوات.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 20 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq20"
+              >
+                هل يمكن للذكاء الاصطناعي أن يصبح أذكى من البشر؟
+              </button>
+            </h2>
+
+            <div
+              id="faq20"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                الذكاء الاصطناعي الحالي قوي جداً في المهام المحددة، لكنه لا
+                يمتلك الوعي أو التفكير العام مثل البشر. ما زال الإنسان هو من
+                يحدد الأهداف ويطور هذه الأنظمة.
+              </div>
+            </div>
+          </div>
+
+          <!-- question 21 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq21"
+              >
+                هل يمكن استخدام الذكاء الاصطناعي لبناء مشروع أو عمل؟
+              </button>
+            </h2>
+
+            <div
+              id="faq21"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                نعم، الكثير من المشاريع اليوم تعتمد على الذكاء الاصطناعي في
+                التصميم وكتابة المحتوى والتسويق وتحليل البيانات وتطوير
+                التطبيقات.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Footer ========================= -->
+    <footer class="footer py-4 mt-5">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2"
+      >
+        <div class="fw-bold">
+          © <span id="year"></span> Yehya AI — استكشف قوة الذكاء الاصطناعي.
+        </div>
+        <div>
+          <a id="Card" href="https://wa.me/972593460374" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            مراسلة واتساب
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
